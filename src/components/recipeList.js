@@ -4,7 +4,8 @@ import Recipe from './recipe';
 
 import '../styles/main.scss';
 
-function RecipeList({ recipes})  {
+function RecipeList({recipes})  {
+
     return (
       <div className="recipe-list">
         <h2 className="recipe-list-head">Showing <span className="recipe-list-ul">'{recipes.query}'</span> recipes</h2>

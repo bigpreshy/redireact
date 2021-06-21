@@ -5,11 +5,10 @@ import RecipeList from './recipeList';
 
 import '../styles/main.scss';
 
-//Variable to store API Key for https request
-const apiKey = 'ce125a22a35a4b0ca71a8def666ed2ff';
+const apiKey = '173d1e55ebd3439797b6b57f7570975e';
 
-//This is temporary. These variables will be selected by user input
-const count = 15;
+
+const count = 18;
 const mealType = 'dinner';
 
 class mainApp extends Component {
@@ -43,7 +42,7 @@ class mainApp extends Component {
     this.setState({ recipes: res.results, query: category });
   };
 
-  //Use Async/Await and the fetch method to make call to API
+  //Using component style here...
   componentDidMount = async () => {
     const req = await fetch(
       `https://api.spoonacular.com/recipes/complexSearch?type=${mealType}&number=${count}&sort=popularity&addRecipeInformation=true&fillIngredients=true&apiKey=${apiKey}`
@@ -54,7 +53,7 @@ class mainApp extends Component {
     console.log(this.state.recipes);
   };
 
-  //Render API data to virtual DOM
+  
   render() {
     return (
       <div className="mainApp-container">
